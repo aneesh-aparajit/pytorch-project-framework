@@ -11,6 +11,7 @@ from typing import Tuple
 from tqdm import tqdm
 import copy
 import wandb
+import gc
 from colorama import Fore, Style
 c_  = Fore.GREEN
 sr_ = Style.RESET_ALL
@@ -83,6 +84,7 @@ def train_one_epoch(
         pbar.set_postfix(
             loss=f'{loss:.5f}', lr=f'{current_lr:.5f}')
         
+    gc.collect()
     return epoch_loss
 
 
@@ -131,6 +133,7 @@ def validate_one_epochs(
             'validation loss': loss
         })
 
+    gc.collect()
     return epoch_loss
 
 
