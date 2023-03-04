@@ -1,3 +1,17 @@
 torch
 torchvision
+
 transformers
+sentence_transformers
+
+numpy
+pandas
+matplotlib
+scikit-learn
+
+# Use either of them
+fastapi
+# streamlit
+
+colorama
+black
