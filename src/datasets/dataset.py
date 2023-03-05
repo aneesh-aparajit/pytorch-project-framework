@@ -5,7 +5,7 @@ from typing import Dict
 import matplotlib.pyplot as plt
 import albumentations as A
 from albumentations.pytorch import ToTensorV2
-from src import config
+from src.config import config
 
 
 class CustomDataset(Dataset):
